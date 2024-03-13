@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/svelte,git,macos,linux,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=svelte,git,macos,linux,windows
 
+### .idea ###
+*/.idea/workspace.xml
+*/.idea/tasks.xml
+
 ### Git ###
 # Created by git for backups. To disable backups in Git:
 # $ git config --global mergetool.keepBackup false
