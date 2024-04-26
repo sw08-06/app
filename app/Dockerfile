@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:slim
 
 WORKDIR /app
 
@@ -8,8 +8,10 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+#RUN npm run build
 
-EXPOSE 3000
+ENV HOST=0.0.0.0
+EXPOSE 5000
 
-CMD ["node", ""]
+CMD [ "npm", "run", "dev" ]
+#CMD [ "npx", "vite", "dev", "--host" ]
