@@ -1,10 +1,11 @@
 <script>
 	import data from './testData.js';
 	import { onMount } from 'svelte';
-	import { scaleLinear, scaleTime, extent } from 'd3';
+	import { scaleLinear, scaleTime, extent, interpolateRound } from 'd3';
 
 	const width = 600;
-	const height = 350;
+	const height = 250;
+	const barWidth = 15;
 	const margin = { top: 40, bottom: 30, left: 50, right: 0 };
 
 	let xScale = scaleTime();
@@ -29,7 +30,9 @@
 
 		xScale = scaleTime()
 			.domain(extentX)
-			.range([margin.left, width - margin.right]);
+			.range([margin.left, width - margin.right - 50])
+			.nice()
+			.interpolate(interpolateRound);
 
 		yScale = scaleLinear()
 			.domain(extentY)
@@ -43,22 +46,24 @@
 			yTicks.push(i);
 		}
 	}
-	let xLabel = (x) => x.getHours().toString();
+	let xLabel = (x) => x.getHours();
 	// d's for axis paths
-	let xPath = `M${margin.left + 0.5},6V0H${width - margin.right + 1}V6`;
-	let yPath = `M-6,${height + 0.5}H0.5V0.5H-6`;
+	let xPath = `M${margin.left},5V0H${width - margin.right -1}V5`;
+	let yPath = `M-5,${height-20}H0.5V0.5H-5`;
 </script>
 
 <svg {width} {height} viewBox="0 0 {width} {height}" role="figure">
-	<g>
+	<g transform="translate(0, -20)">
 		<!-- bars -->
 		{#each data as d}
 			<rect
 				x={xScale(d.time)}
 				y={yScale(d.stress)}
-				width="10"
+				width={barWidth}
 				height={height - yScale(d.stress)}
 				fill="blue"
+				rx="5"
+				ry="5"
 			/>
 		{/each}
 	</g>
@@ -67,7 +72,7 @@
 		<path stroke="currentColor" d={yPath} fill="none" />
 
 		{#each yTicks as y}
-			<g class="tick" opacity="1" transform="translate(0,{yScale(y)})">
+			<g class="tick" opacity="1" transform="translate(0,{yScale(y)-20})">
 				<line stroke="currentColor" x2="-5" />
 				<text dy="0.32em" fill="currentColor" x="-{margin.left}">
 					{y}
@@ -76,13 +81,13 @@
 		{/each}
 	</g>
 
-	<g transform="translate(0, {height})">
+	<g transform="translate(0, {height-20})">
 		<path stroke="currentColor" d={xPath} fill="none" />
 
 		{#each xTicks as x}
-			<g class="tick" opacity="1" transform="translate({xScale(x)},0)">
-				<line stroke="currentColor" y2="6" />
-				<text fill="currentColor" y="9" dy="0.71em" x="-{margin.left}">
+			<g class="tick" opacity="1" transform="translate({xScale(x)+(barWidth/2)},0)">
+				<line stroke="currentColor" y2="5" />
+				<text fill="currentColor" y="9" dy="0.71em" x="-3">
 					{xLabel(x)}
 				</text>
 			</g>
