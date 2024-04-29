@@ -1,5 +1,4 @@
 <script>
-	//import graph from "./graph.svelte";
 	import histogram from './histogram.svelte';
 	export let items = [];
 	export let activeTabValue = 1;

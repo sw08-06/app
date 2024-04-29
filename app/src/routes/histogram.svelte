@@ -13,6 +13,14 @@
 	let xTicks = [];
 	let yTicks = [];
 
+	//const endpoint = "0.0.0.0:5000";
+
+	//onMount(async function () {
+	//	const response = await fetch(endpoint);
+	//	const data = await response.json();
+	//	console.log(data);
+	//});
+
 	onMount(() => {
 		updateScales(); // Initialize scales
 	});
