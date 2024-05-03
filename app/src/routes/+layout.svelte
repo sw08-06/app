@@ -1,8 +1,5 @@
 <script>
-    import "../app.css";
+	import '../app.css';
 </script>
-  
-<div>
-    <!-- Slot for dynamic content -->
-    <slot />
-</div>
+
+<slot />
