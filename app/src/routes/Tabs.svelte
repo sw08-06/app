@@ -23,7 +23,7 @@
 </ul>
 {#each items as item}
 	{#if activeTabValue === item.value}
-		<div class="box">
+		<div class="bg-slate-900 mt-1 mx-4">
 			<h2>
 				This is your stress data for the {item.label.toLowerCase()}!
 			</h2>

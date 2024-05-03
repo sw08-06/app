@@ -2,7 +2,7 @@
     import "../app.css";
 </script>
   
-<div class="dark-mode bg-gray-900">
+<div>
     <!-- Slot for dynamic content -->
     <slot />
 </div>
