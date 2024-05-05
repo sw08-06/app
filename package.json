@@ -43,7 +43,7 @@
 		"@capacitor/cli": "^6.0.0",
 		"@capacitor/core": "^6.0.0",
 		"@capacitor/ios": "^6.0.0",
-		"@sveltejs/adapter-static": "^3.0.1",
-		"highcharts": "^11.4.1"
+		"@carbon/charts-svelte": "^1.15.7",
+		"@sveltejs/adapter-static": "^3.0.1"
 	}
 }

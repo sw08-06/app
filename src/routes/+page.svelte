@@ -1,17 +1,27 @@
 <script lang="ts">
-	import ScaleButton from '$lib/components/ScaleButton.svelte';
-	import Histogram from '$lib/components/Histogram.svelte';
-	import { Scales } from '$lib/types.ts';
+	import Heatmap from '$lib/components/Heatmap.svelte';
+	import DonutChart from '$lib/components/DonutChart.svelte';
+	import test_data_month from '$lib/components/test_data_month';
+	import test_data_day from '$lib/components/test_data_day';
 
-	let scale: Scales = Scales.DAY;
+	let heatmap_data: any;
+	let donut_data: any;
+
+	$: {
+		heatmap_data = test_data_month;
+		donut_data = test_data_day;
+	}
 </script>
 
-<title>Name of product</title>
+<title>Product Name</title>
 <body class="bg-neutral-900 h-screen flex flex-col items-center">
-	<Histogram />
-	<div class="w-full flex justify-evenly items-center p-8">
-		<ScaleButton onClick={() => (scale = Scales.DAY)} text={'Day'} />
-		<ScaleButton onClick={() => (scale = Scales.WEEK)} text={'Week'} />
-		<ScaleButton onClick={() => (scale = Scales.MONTH)} text={'Month'} />
-	</div>
+	<header class="text-white text-3xl font-bold m-4 shadow-lg">Product Name</header>
+	<section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4 mb-4">
+		<h2 class="text-lg text-white mb-4">Latest Four Weeks</h2>
+		<Heatmap data={heatmap_data} />
+	</section>
+	<section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4">
+		<h2 class="text-lg text-white mb-4">Today</h2>
+		<DonutChart data={donut_data} />
+	</section>
 </body>
