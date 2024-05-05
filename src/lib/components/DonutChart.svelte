@@ -16,7 +16,7 @@
 			alignment: 'center'
 		},
 		legend: {
-			alignment: 'center'
+			alignment: 'center',
 		},
 		toolbar: { enabled: false },
 		resizable: true,

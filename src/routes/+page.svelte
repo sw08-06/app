@@ -15,13 +15,13 @@
 
 <title>Product Name</title>
 <body class="bg-neutral-900 h-screen flex flex-col items-center">
-	<header class="text-white text-3xl font-bold m-4 shadow-lg">Product Name</header>
+	<header class="text-white text-2xl font-bold mt-4 mb-4 shadow-lg">Product Name</header>
 	<section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4 mb-4">
-		<h2 class="text-lg text-white mb-4">Latest Four Weeks</h2>
+		<h2 class="text-lg text-white mb-4">Monthly Stress</h2>
 		<Heatmap data={heatmap_data} />
 	</section>
 	<section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4">
-		<h2 class="text-lg text-white mb-4">Today</h2>
+		<h2 class="text-lg text-white mb-4">Daily Stress for [date]</h2>
 		<DonutChart data={donut_data} />
 	</section>
 </body>
