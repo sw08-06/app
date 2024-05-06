@@ -21,8 +21,7 @@
 		},
 		heatmap: {
 			colorLegend: {
-				title: 'Stress level',
-				type: 'quantize'
+				title: 'Stress level'
 			}
 		}
 	};
