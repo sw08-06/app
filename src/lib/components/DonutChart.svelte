@@ -25,7 +25,7 @@
 	});
 
 	let options: any = {
-		theme: 'g90',
+		theme: 'g100',
 		title: '',
 		width: '300px',
 		height: '300px',

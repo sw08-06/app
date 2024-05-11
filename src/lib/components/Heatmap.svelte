@@ -29,7 +29,7 @@
 	}
 
 	let options: any = {
-		theme: 'g90',
+		theme: 'g100',
 		height: '300px',
 		toolbar: { enabled: false },
 		axes: {
