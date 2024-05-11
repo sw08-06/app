@@ -22,14 +22,14 @@
 	<header class="text-neutral-300 text-2xl font-bold mt-4 mb-4 shadow-lg">Harmony</header>
 	<section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4 mb-4">
 		<div class="flex justify-between w-full">
-			<h2 class="text-lg text-neutral-300 mb-4">Monthly Stress</h2>
+			<h2 class="text-lg text-neutral-300 mb-4">Four-Week Stress Heatmap</h2>
 			<Tooltip headerText={'Heatmap of Monthly Stress'} text={heatmapTooltipText} />
 		</div>
 		<Heatmap />
 	</section>
 	<section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4">
 		<div class="flex justify-between w-full">
-			<h2 class="text-lg text-neutral-300 mb-4">Daily Stress for [date]</h2>
+			<h2 class="text-lg text-neutral-300 mb-4">Daily Stress Distribution of [date]</h2>
 			<Tooltip headerText={'Donut Chart of Daily Stress'} text={donutTooltipText} />
 		</div>
 		<DonutChart />

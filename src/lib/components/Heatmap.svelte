@@ -27,7 +27,8 @@
 	});
 
 	function formatDate() {
-		dates = ['Week 18', 'Week 17', 'Week 16', 'Week 15'];
+		// implement logic for creating the labels based on the timestamp data
+		dates = ['06/05-12/05', '29/04-05/05', '22/04-28/04', '15/04-21/04'];
 		return dates;
 	}
 
