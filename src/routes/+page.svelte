@@ -3,8 +3,18 @@
 	import DonutChart from '$lib/components/DonutChart.svelte';
 	import Tooltip from '$lib/components/Tooltip.svelte';
 
-	let heatmapTooltipText: string = 'something';
-	let donutTooltipText: string = 'something';
+	let heatmapTooltipText: string = `The heatmap diagram displays your stress levels over the past four weeks. 
+									  Each cell represents a day, with color intensity indicating the level of stress experienced. 
+									  Darker shades signify higher stress levels, while lighter shades represent lower stress. 
+									  Use this visualization to identify patterns and trends in your stress levels over time, 
+									  helping you understand your stressors and manage them effectively.`;
+	let donutTooltipText: string = `The donut chart displays stress data for a single day, 
+									segmented into eight groups representing three-hour intervals. 
+									Each segment represents a specific time period within the day, 
+									ranging from 0-3 hours to 21-24 hours. 
+									The size of each segment corresponds to the level of stress experienced during that time interval. 
+									Use this visualization to gain insight into how your stress fluctuates throughout the day, 
+									helping you identify peak stress periods and potential triggers.`;
 </script>
 
 <title>Harmony</title>
