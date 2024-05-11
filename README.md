@@ -1,4 +1,5 @@
 # Frontend
+This repository contains the code for the service responsible for the UI.
 
 ## Development
 To install project dependencies, run:
@@ -37,3 +38,6 @@ To open the Android project in Android Studio and run it in an emulator, execute
 ```
 npx cap open android
 ```
+
+## License
+This project is licensed under the MIT License.
