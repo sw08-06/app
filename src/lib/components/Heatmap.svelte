@@ -5,6 +5,8 @@
 	import test_data_month from '$lib/components/test_data_month';
 
 	let data: any;
+	let dates: string[];
+	dates = formatDate();
 
 	$: {
 		data = test_data_month;
@@ -24,8 +26,9 @@
 		}
 	});
 
-	function formatDate(timestamp: string) {
-		return '';
+	function formatDate() {
+		dates = ['Week 18', 'Week 17', 'Week 16', 'Week 15'];
+		return dates;
 	}
 
 	let options: any = {
@@ -40,7 +43,7 @@
 			left: {
 				mapsTo: 'week',
 				scaleType: 'labels',
-				domain: ['Week 18', 'Week 17', 'Week 16', 'Week 15']
+				domain: [dates[0], dates[1], dates[2], dates[3]]
 			}
 		},
 		heatmap: {

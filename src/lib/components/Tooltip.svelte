@@ -9,10 +9,10 @@
 
 <button
 	on:click={() => (showModal = true)}
-	class="flex justify-center items-center bg-slate-700 text-neutral-300 rounded-xl border border-slate-900 w-6 h-6"
+	class="flex justify-center items-center bg-neutral-700 text-neutral-300 rounded-xl border border-slate-900 w-6 h-6"
 	>?</button
 >
 <Modal bind:showModal>
-	<h1 slot="header">{headerText}</h1>
-	<p>{text}</p>
+	<h1 class="text-neutral-300 text-lg" slot="header">{headerText}</h1>
+	<p class="text-neutral-300">{text}</p>
 </Modal>
