@@ -1,32 +1,11 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { DonutChart } from '@carbon/charts-svelte';
 	import '@carbon/charts-svelte/styles.css';
-	import test_data_day from '$lib/components/test_data_day';
 
-	let data: any;
-
-	$: {
-		data = test_data_day;
-	}
-
-	onMount(async () => {
-		try {
-			const response = await fetch(import.meta.env.VITE_API_URL, { method: 'GET' });
-			if (response.ok) {
-				const data = await response.json();
-				console.log(data);
-			} else {
-				console.error(await response.text());
-			}
-		} catch (error) {
-			console.error('Error:', error);
-		}
-	});
+	export let data: any;
 
 	let options: any = {
 		theme: 'g100',
-		title: '',
 		width: '300px',
 		height: '300px',
 		donut: {
