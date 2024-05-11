@@ -8,6 +8,7 @@
 									  Darker shades signify higher stress levels, while lighter shades represent lower stress. 
 									  Use this visualization to identify patterns and trends in your stress levels over time, 
 									  helping you understand your stressors and manage them effectively.`;
+
 	let donutTooltipText: string = `The donut chart displays stress data for a single day, 
 									segmented into eight groups representing three-hour intervals. 
 									Each segment represents a specific time period within the day, 
@@ -15,11 +16,21 @@
 									The size of each segment corresponds to the level of stress experienced during that time interval. 
 									Use this visualization to gain insight into how your stress fluctuates throughout the day, 
 									helping you identify peak stress periods and potential triggers.`;
+
+	let stressLevelText: string = `Harmony provides insights into stress levels, measured by the frequency of stress detections from smartwatch data. 
+								   Through visualizations like heatmaps and donut charts, users gain a deeper understanding of their stress patterns, 
+								   facilitating informed decisions for a balanced lifestyle.`;
 </script>
 
 <title>Harmony</title>
 <body class="bg-neutral-900 h-screen flex flex-col items-center">
-	<header class="text-neutral-300 text-2xl font-bold mt-3 mb-3 shadow-lg">Harmony</header>
+	<div class="flex justify-between items-center w-full">
+		<div class="w-10"></div>
+		<header class="text-neutral-300 text-2xl font-bold mt-3 mb-3 shadow-lg">Harmony</header>
+		<div class="w-10 flex justify-end">
+			<Tooltip headerText={'Harmony'} text={stressLevelText} />
+		</div>
+	</div>
 	<section
 		class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4 mb-2 border border-slate-900"
 	>
