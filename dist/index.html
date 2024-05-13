@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.DVpTIQCz.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.BNfD4LIC.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.B8vh3Vun.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.DzjVKUMk.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.DHtevaw3.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DOcnTCIy.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.DxYMm8kV.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.CPmm2F56.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.deWl-1Qi.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <title data-svelte-h="svelte-18o0v6i">Product Name</title> <body class="bg-neutral-900 h-screen flex flex-col items-center"><header class="text-white text-2xl font-bold mt-4 mb-4 shadow-lg" data-svelte-h="svelte-8rx3v3">Product Name</header> <section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4 mb-4"><h2 class="text-lg text-white mb-4" data-svelte-h="svelte-jnr3y2">Monthly Stress</h2> <div id="chart-0.b6heka9lxnm" class="cds--chart-holder"></div></section> <section class="bg-neutral-800 flex flex-col items-center rounded-lg shadow-lg p-4"><h2 class="text-lg text-white mb-4" data-svelte-h="svelte-aw18id">Daily Stress for [date]</h2> <div id="chart-0.emjtuf7odkm" class="cds--chart-holder"></div></section></body> 
+			
+			<script>
+				{
+					__sveltekit_dwznku = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.B8vh3Vun.js"),
+						import("./_app/immutable/entry/app.DOcnTCIy.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

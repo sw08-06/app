@@ -1,1 +1,0 @@
-<p>Month stuff</p>
