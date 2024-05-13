@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { DonutChart } from '@carbon/charts-svelte';
 	import '@carbon/charts-svelte/styles.css';
+	import { donutChartStore } from '$lib/stores';
+	import type { DonutChartData } from '$lib/types';
 
-	export let data: any;
+	let data: DonutChartData[];
+	$: data = $donutChartStore;
 
 	let options: any = {
 		theme: 'g100',
@@ -25,6 +28,4 @@
 	};
 </script>
 
-{#if data}
-	<DonutChart {data} {options} />
-{/if}
+<DonutChart {data} {options} />
