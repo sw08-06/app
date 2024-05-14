@@ -37,7 +37,7 @@
 									helping you identify peak stress periods and potential triggers.`;
 
 	let stressLevelText: string = `Harmony provides insights into stress levels, measured by the frequency of stress detections from smartwatch data. 
-								   Through visualizations like heatmaps and donut charts, users gain a deeper understanding of their stress patterns, 
+								   Through visualizations like heatmaps and donut charts, you can gain a deeper understanding of your stress patterns, 
 								   facilitating informed decisions for a balanced lifestyle.`;
 </script>
 
@@ -66,7 +66,7 @@
 	>
 		<div class="flex justify-between w-full">
 			<h2 class="text-lg text-neutral-300 mb-4">
-				Daily Stress Distribution of {$donutChartDateStore}
+				Daily Stress Distribution for {$donutChartDateStore}
 			</h2>
 			<Tooltip headerText={'Donut Chart of Daily Stress'} text={donutTooltipText} />
 		</div>
