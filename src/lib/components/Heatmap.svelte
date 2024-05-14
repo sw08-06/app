@@ -12,22 +12,25 @@
 		updateDonutChartData(data, data.at(-1).day, data.at(-1).week, data.at(-1).value);
 	}
 
-	document.addEventListener('click', function (event) {
-		const clickedElement = event.target;
+	document.addEventListener('click', function (event: MouseEvent) {
+		const clickedElement = event.target as HTMLElement;
+
 		if (
 			!clickedElement ||
-			!clickedElement.__data__ ||
-			typeof clickedElement.__data__ !== 'object' ||
-			!('day' in clickedElement.__data__) ||
-			!('week' in clickedElement.__data__) ||
-			!('index' in clickedElement.__data__)
+			!(clickedElement as any).__data__ ||
+			typeof (clickedElement as any).__data__ !== 'object' ||
+			!('day' in (clickedElement as any).__data__) ||
+			!('week' in (clickedElement as any).__data__) ||
+			!('index' in (clickedElement as any).__data__)
 		) {
 			return;
 		}
 
-		const day: string | null = clickedElement.__data__.day;
-		const week: string | null = clickedElement.__data__.week;
-		const index: number | null = clickedElement.__data__.index;
+		const data = (clickedElement as any).__data__;
+
+		const day: string | null = data.day;
+		const week: string | null = data.week;
+		const index: number | null = data.index;
 		if (day !== null && week !== null && index !== null) {
 			updateDonutChartData(data, day, week, index);
 		}
