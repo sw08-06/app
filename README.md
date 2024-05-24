@@ -17,7 +17,7 @@ npm run dev -- --open
 
 Alternatively, Docker Compose can be used. To run the entire system, the `deployment` repository must first be cloned from the organization. This repository contains the Docker Compose file for running the entire system. Additionally, the other repositories must be cloned for the `frontend`, `data_generator`, `stress_predictor`, and `api` components. After cloning, ensure that all these repositories are placed within the same folder.
 
-Furtermore, a `.env` file must be created in the frontend root directory with the following environment variable:
+Furthermore, a `.env` file must be created in the frontend root directory with the following environment variable:
 ```
 VITE_API_URL="http://localhost:3000"
 ```
